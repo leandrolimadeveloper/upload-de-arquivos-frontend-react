@@ -77,10 +77,12 @@ class App extends Component {
       })
       .then(response => {
         this.updateFile(uploadedFile.id, {
+          
           uploaded: true,
           id: response.data._id,
           url: response.data.url
         });
+        console.log(response)
       })
       .catch(() => {
         this.updateFile(uploadedFile.id, {
